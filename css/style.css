@@ -1,0 +1,426 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,900');
+
+@font-face {
+    font-family: "TrajanPro3-Bold";
+    src: url("TrajanPro3-Bold.otf") format("opentype");
+    font-weight: bold;
+}
+
+
+#pc {
+    display: inline-block;
+}
+
+#mobile {
+    display: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2 {
+    color: #4b0082;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+
+/* Navbar START */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #4b0082;
+    padding: 15px 0;
+    text-align: center;
+    z-index: 1000;
+    font-family: 'Poppins', sans-serif;
+    /* Adds modern font */
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 15px;
+    display: inline-block;
+    transition: color 0.3s ease-in-out;
+    /* Smooth hover effect */
+}
+
+.navbar li {
+    display: inline;
+    margin: 0 20px;
+}
+
+
+
+.navbar a:hover {
+    color: #ffd700;
+    /* Gold hover effect */
+}
+
+/* Navbar END */
+
+.parallax {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    perspective: 1px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.foreground {
+    position: absolute;
+    transform: translateY(35vw);
+}
+
+.background {
+    transform: translateZ(-0.5px);
+    position: absolute;
+}
+
+.content {
+    transform: scale(0.9) translateY(-1px);
+}
+
+.hero {
+    width: 100vw;
+    height: 100vh;
+    /* Full viewport height */
+    overflow: hidden;
+    /* Ensures no extra space */
+    position: relative;
+}
+
+.hero-img {
+    width: 100vw;
+    /* Ensures the image takes the full width */
+    height: 100vh;
+    /* Ensures the image fills the screen vertically */
+    object-fit: cover;
+    /* Crops the image while maintaining aspect ratio */
+    object-position: center;
+    /* Centers the image properly */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.link {
+    text-decoration: none;
+    color: white;
+}
+
+
+.about {
+    height: 100%;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.about-text {
+    font-family: 'Lato', sans-serif;
+    font-weight: lighter;
+    font-size: 29.7px;
+    color: #000000;
+    padding-left: 26%;
+    padding-right: 26%;
+    padding-top: 40vh;
+    padding-bottom: 25vh;
+    text-align: center;
+}
+
+.grid {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 10%;
+    display: grid;
+    grid-template-columns: 62% 38%;
+    height: 100%;
+}
+
+.grid-left {
+    padding-left: 10%;
+    padding-right: 10%;
+    display: grid;
+    grid-template-columns: 38% 62%;
+    height: 100%;
+    padding-bottom: 10%;
+}
+
+.grid-title {
+    font-family: "AvenirNext-Heavy";
+    font-size: 5rem;
+    margin-top: -1.24vw;
+    line-height: 13vw;
+    color: #000000;
+    text-align: left;
+}
+
+.grid-txt-bebe {
+    font-family: 'Lato', sans-serif;
+    font-weight: lighter;
+    padding-right: 25px;
+    padding-left: 8px;
+    color: #000000;
+    text-align: left;
+    hyphens: none;
+    font-size: 1.6rem;
+}
+
+.grid-img {
+    width: 20em;
+    /* Allows scaling based on font size */
+    max-width: 100%;
+    /* Prevents image from exceeding its container */
+    height: auto;
+    /* Maintains aspect ratio */
+    margin-top: -4px;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    transition: all .3s ease;
+}
+
+.grid-img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 80px 0 rgba(0, 0, 0, 0.4);
+    transition: all .3s ease;
+}
+
+
+
+
+
+.grid-txt-sleepy {
+    font-family: 'Lato', sans-serif;
+    font-weight: lighter;
+    font-size: 1.6rem;
+    margin-top: -0.7vw;
+    padding-right: 2vw;
+    color: #000000;
+    text-align: left;
+    hyphens: none;
+}
+
+
+
+.grid-txt-scratches {
+    font-family: 'Lato', sans-serif;
+    font-weight: lighter;
+    font-size: 1.6rem;
+    color: #000000;
+    text-align: left;
+    padding-right: 15px;
+    hyphens: none;
+}
+
+
+
+
+.footer {
+    font-family: Lato-light;
+    font-size: 20px;
+    left: 0;
+    bottom: 0;
+    width: 112vw;
+    height: 100%;
+    margin-left: -6vw;
+    margin-bottom: -30vh;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.footer-text {
+    padding-top: 1vw;
+    padding-left: 6vw;
+    padding-right: 6vw;
+}
+
+.left {
+    text-align: left;
+}
+
+.center {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+}
+
+.grid-footer {
+    font-size: 50px;
+    display: grid;
+    grid-template-columns: 4fr 1fr 4fr;
+}
+
+.footer-social {
+    font
+}
+
+
+/* INTERESTS START */
+#interests,
+#skills {
+    text-align: center;
+    padding: 40px 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+#interests ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#interests li {
+    background: #f4f4f4;
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 20px;
+    font-weight: 500;
+}
+/* INTERESTS END */
+
+/* CONTACT FORM START */
+
+#contact {
+    background-color: #4b0082;
+    padding: 30px;
+    text-align: center;
+    color: white;
+}
+
+#contact h2 {
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+form label {
+    text-align: left;
+    font-weight: bold;
+}
+
+form input,
+form textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+}
+
+button {
+    background-color: white;
+    color: #4b0082;
+    padding: 10px 15px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #ddd;
+}
+
+
+/* CONTACT FORM END */
+
+
+/* FOOTER START */
+footer {
+    background-color: #4b0082;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-links a {
+    color: white;
+    margin: 0 15px;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: #ddd;
+}
+/* FOOTER END */
+
+
+/* SKILLS START */
+#skills {
+    background-color: #f4f4f4;
+    padding: 50px 20px;
+    border-radius: 10px;
+}
+
+#skills table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+#skills th {
+    background-color: #4b0082;
+    color: white;
+    padding: 12px;
+}
+
+#skills td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+#skills tr:nth-child(even) {
+    background-color: #e7e7e7;
+}
+/* SKILLS END */
+
+
+/* MEDIA QUERY */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
