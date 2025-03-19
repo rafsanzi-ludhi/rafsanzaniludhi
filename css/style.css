@@ -148,12 +148,22 @@ h1, h2 {
 }
 
 .grid {
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-bottom: 10%;
     display: grid;
     grid-template-columns: 62% 38%;
-    height: 100%;
+    /* Image on the right */
+    gap: 20px;
+    /* Adds spacing */
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 5%;
+    align-items: center;
+    /* Aligns items vertically */
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    /* Centers image horizontally */
 }
 
 .grid-left {
@@ -195,6 +205,7 @@ h1, h2 {
     margin-top: -4px;
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
     transition: all .3s ease;
+    border-radius: 15px;
 }
 
 .grid-img:hover {
@@ -257,9 +268,7 @@ h1, h2 {
     text-align: left;
 }
 
-.center {
-    text-align: center;
-}
+
 
 .right {
     text-align: right;
@@ -381,6 +390,7 @@ footer {
     background-color: #f4f4f4;
     padding: 50px 20px;
     border-radius: 10px;
+    text-align: center;
 }
 
 #skills table {
@@ -393,6 +403,7 @@ footer {
     background-color: #4b0082;
     color: white;
     padding: 12px;
+    text-align: left;
 }
 
 #skills td {
@@ -408,11 +419,43 @@ footer {
 
 /* MEDIA QUERY */
 
+/* Responsive Layout: Stack image below text */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+        /* Single column layout */
+    }
+
+    .center {
+        order: 2;
+        /* Moves image below text */
+    }
+}
 
 
 
+@media (max-width: 768px) {
+    #skills table {
+        width: 100%;
+        /* Table stretches to full width */
+    }
 
+    #skills th,
+    #skills td {
+        padding: 8px;
+        /* Adjust padding for smaller screens */
+        font-size: 14px;
+        /* Slightly reduce font size for readability */
+    }
 
+    #skills th {
+        text-align: center;
+    }
+
+    #skills td {
+        text-align: center;
+    }
+}
 
 
 
