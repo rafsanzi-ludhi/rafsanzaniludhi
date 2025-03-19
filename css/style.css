@@ -41,7 +41,6 @@ h1, h2 {
     text-align: center;
     z-index: 1000;
     font-family: 'Poppins', sans-serif;
-    /* Adds modern font */
 }
 
 .navbar ul {
@@ -58,7 +57,6 @@ h1, h2 {
     padding: 10px 15px;
     display: inline-block;
     transition: color 0.3s ease-in-out;
-    /* Smooth hover effect */
 }
 
 .navbar li {
@@ -70,7 +68,6 @@ h1, h2 {
 
 .navbar a:hover {
     color: #ffd700;
-    /* Gold hover effect */
 }
 
 /* Navbar END */
@@ -96,28 +93,20 @@ h1, h2 {
     position: absolute;
 }
 
-.content {
-    transform: scale(0.9) translateY(-1px);
-}
+
 
 .hero {
     width: 100vw;
     height: 100vh;
-    /* Full viewport height */
     overflow: hidden;
-    /* Ensures no extra space */
     position: relative;
 }
 
 .hero-img {
     width: 100vw;
-    /* Ensures the image takes the full width */
     height: 100vh;
-    /* Ensures the image fills the screen vertically */
     object-fit: cover;
-    /* Crops the image while maintaining aspect ratio */
     object-position: center;
-    /* Centers the image properly */
     position: absolute;
     top: 0;
     left: 0;
@@ -128,6 +117,9 @@ h1, h2 {
     color: white;
 }
 
+.content {
+    transform: scale(0.9) translateY(-1px);
+}
 
 .about {
     height: 100%;
@@ -138,32 +130,28 @@ h1, h2 {
 .about-text {
     font-family: 'Lato', sans-serif;
     font-weight: lighter;
-    font-size: 29.7px;
+    font-size: 2vw;
     color: #000000;
-    padding-left: 26%;
-    padding-right: 26%;
-    padding-top: 40vh;
-    padding-bottom: 25vh;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    padding-top: 15vh;
+    padding-bottom: 10vh;
     text-align: center;
 }
 
 .grid {
     display: grid;
     grid-template-columns: 62% 38%;
-    /* Image on the right */
     gap: 20px;
-    /* Adds spacing */
     padding-left: 10%;
     padding-right: 10%;
     padding-bottom: 5%;
     align-items: center;
-    /* Aligns items vertically */
 }
 
 .center {
     display: flex;
     justify-content: center;
-    /* Centers image horizontally */
 }
 
 .grid-left {
@@ -197,11 +185,8 @@ h1, h2 {
 
 .grid-img {
     width: 20em;
-    /* Allows scaling based on font size */
     max-width: 100%;
-    /* Prevents image from exceeding its container */
     height: auto;
-    /* Maintains aspect ratio */
     margin-top: -4px;
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
     transition: all .3s ease;
@@ -419,16 +404,35 @@ footer {
 
 /* MEDIA QUERY */
 
-/* Responsive Layout: Stack image below text */
+
+@media screen and (max-width: 768px) {
+    .about-text {
+        font-size: 2.8vw;
+        padding-left: 5vw;
+        padding-right: 5vw;
+        padding-top: 10vh;
+        padding-bottom: 8vh;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .about-text {
+        font-size: 3.5vw;
+        padding-left: 3vw;
+        padding-right: 3vw;
+        padding-top: 5vh;
+        padding-bottom: 5vh;
+    }
+}
+
+
 @media (max-width: 768px) {
     .grid {
         grid-template-columns: 1fr;
-        /* Single column layout */
     }
 
     .center {
         order: 2;
-        /* Moves image below text */
     }
 }
 
@@ -437,15 +441,12 @@ footer {
 @media (max-width: 768px) {
     #skills table {
         width: 100%;
-        /* Table stretches to full width */
     }
 
     #skills th,
     #skills td {
         padding: 8px;
-        /* Adjust padding for smaller screens */
         font-size: 14px;
-        /* Slightly reduce font size for readability */
     }
 
     #skills th {
@@ -456,6 +457,8 @@ footer {
         text-align: center;
     }
 }
+
+
 
 
 
